@@ -14,6 +14,7 @@ RUN apk update && apk add --no-cache \
       libffi-dev \
       make \
       openssl-dev \
+      patch \
       readline-dev \
       sqlite-dev \
       xz-dev \
