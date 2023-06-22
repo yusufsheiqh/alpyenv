@@ -21,4 +21,4 @@ RUN apk update && apk add --no-cache \
       zlib-dev \
     && git clone --depth=1 https://github.com/pyenv/pyenv.git .pyenv \
     && pyenv install ${PYTHON_VERSIONS} \
-    && pyenv global $(echo ${PYTHON_VERSIONS} | awk '{ print $NF }')
+    && pyenv global $(echo ${PYTHON_VERSIONS} | xargs -n 1 | tac | xargs)
